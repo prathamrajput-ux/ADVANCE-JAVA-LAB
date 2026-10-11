@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 
-<c:set var="pageTitle" value="ShopSphere - ${product.name}" />
+<c:set var="pageTitle" value="NovaMart - ${product.name}" />
 <%@ include file="fragments/header.jsp" %>
 <%@ include file="fragments/navbar.jsp" %>
 
@@ -30,7 +30,7 @@
                     <img src="${product.imageUrl}" alt="${product.name}" class="img-fluid rounded"
                          loading="lazy" decoding="async"
                          style="max-height: 420px; object-fit: contain;"
-                         onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'450\'><rect width=\'100%25\' height=\'100%25\' fill=\'%23e9ecef\'/><text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%236c757d\' font-family=\'sans-serif\' font-size=\'20\'>ShopSphere Product</text></svg>';">
+                         onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'450\'><rect width=\'100%25\' height=\'100%25\' fill=\'%23e9ecef\'/><text x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%236c757d\' font-family=\'sans-serif\' font-size=\'20\'>NovaMart Product</text></svg>';">
                 </div>
             </div>
 

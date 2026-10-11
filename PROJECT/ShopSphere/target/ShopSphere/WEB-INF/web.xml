@@ -5,7 +5,7 @@
                              https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-    <display-name>ShopSphere E-Commerce</display-name>
+    <display-name>NovaMart E-Commerce</display-name>
 
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>

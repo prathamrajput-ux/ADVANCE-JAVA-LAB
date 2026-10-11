@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<c:set var="pageTitle" value="ShopSphere - Home" />
+<c:set var="pageTitle" value="NovaMart - Modern Shopping" />
 <%@ include file="fragments/header.jsp" %>
 <%@ include file="fragments/navbar.jsp" %>
 
@@ -10,10 +10,10 @@
     <div class="hero-banner p-5 text-center text-lg-start shadow-sm mb-5">
         <div class="row align-items-center">
             <div class="col-lg-8">
-                <span class="badge bg-light text-primary mb-2 px-3 py-2 fw-semibold">RTU Java Enterprise Project</span>
-                <h1 class="display-4 fw-bold mb-3">Welcome to ShopSphere</h1>
+                <span class="badge bg-light text-primary mb-2 px-3 py-2 fw-semibold">Java Enterprise E-Commerce</span>
+                <h1 class="display-4 fw-bold mb-3">Welcome to NovaMart</h1>
                 <p class="lead mb-4 text-white-50">
-                    A complete, modern e-commerce web application engineered with Jakarta Servlets, JSP, JSTL, and MySQL Database.
+                    Discover curated essentials with fast ordering, secure checkout, and real-time inventory tracking.
                 </p>
                 <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
                     <a href="${pageContext.request.contextPath}/products" class="btn btn-warning btn-lg fw-bold text-dark px-4 shadow-sm">

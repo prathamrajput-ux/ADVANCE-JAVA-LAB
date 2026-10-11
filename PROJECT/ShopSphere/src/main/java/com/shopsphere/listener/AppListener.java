@@ -17,12 +17,15 @@ public class AppListener implements ServletContextListener, HttpSessionListener 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
-        context.setAttribute("appName", "ShopSphere");
-        context.setAttribute("appTagline", "RTU Java Enterprise E-Commerce System");
+        context.setAttribute("appName", "NovaMart");
+        context.setAttribute("appTagline", "Next-Gen Java Enterprise E-Commerce System");
 
         System.out.println("=============================================================");
         System.out.println(">>> [ShopSphere] Application Initialized on Tomcat.");
-        System.out.println(">>> Checking database connectivity...");
+        System.out.println(">>> Checking database connectivity and schema...");
+
+        // Ensure database tables and seed data are populated
+        com.shopsphere.util.DatabaseInitializer.initializeDatabaseIfEmpty();
 
         try (Connection con = DBConnection.getConnection()) {
             if (con != null && !con.isClosed()) {

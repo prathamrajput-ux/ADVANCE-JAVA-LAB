@@ -15,6 +15,7 @@ com\shopsphere\model\Product.class
 com\shopsphere\listener\AppListener.class
 com\shopsphere\controller\AdminUserServlet.class
 com\shopsphere\desktop\SwingInventoryViewer.class
+com\shopsphere\util\DatabaseInitializer.class
 com\shopsphere\desktop\SwingInventoryViewer$CategoryItem.class
 com\shopsphere\model\CartItem.class
 com\shopsphere\controller\CheckoutServlet.class

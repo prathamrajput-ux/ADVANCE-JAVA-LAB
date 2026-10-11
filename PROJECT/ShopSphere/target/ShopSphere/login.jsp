@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<c:set var="pageTitle" value="ShopSphere - Login" />
+<c:set var="pageTitle" value="NovaMart - Login" />
 <%@ include file="fragments/header.jsp" %>
 <%@ include file="fragments/navbar.jsp" %>
 
@@ -14,7 +14,7 @@
                         <i class="bi bi-person-fill fs-2"></i>
                     </div>
                     <h3 class="fw-bold">Sign In</h3>
-                    <p class="text-muted small">Access your ShopSphere account & orders</p>
+                    <p class="text-muted small">Access your NovaMart account & orders</p>
                 </div>
 
                 <!-- Success Flash Alert -->

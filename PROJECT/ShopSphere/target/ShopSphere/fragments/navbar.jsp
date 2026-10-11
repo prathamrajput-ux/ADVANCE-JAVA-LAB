@@ -1,12 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top shadow-sm py-2">
     <div class="container">
         <!-- Brand -->
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="${pageContext.request.contextPath}/index.jsp">
-            <i class="bi bi-bag-check-fill text-primary fs-4"></i>
-            <span>ShopSphere</span>
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2 fs-4" href="${pageContext.request.contextPath}/index.jsp">
+            <i class="bi bi-bag-heart-fill text-primary"></i>
+            <span style="letter-spacing: -0.5px;">Nova<span class="text-primary">Mart</span></span>
         </a>
 
         <!-- Toggle Button for Mobile -->

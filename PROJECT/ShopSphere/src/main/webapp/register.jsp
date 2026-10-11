@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<c:set var="pageTitle" value="ShopSphere - Register" />
+<c:set var="pageTitle" value="NovaMart - Register" />
 <%@ include file="fragments/header.jsp" %>
 <%@ include file="fragments/navbar.jsp" %>
 
@@ -10,11 +10,11 @@
         <div class="col-md-7 col-lg-6">
             <div class="card border-0 shadow-sm p-4 rounded-3">
                 <div class="text-center mb-4">
-                    <div class="bg-success text-white d-inline-flex p-3 rounded-circle mb-3 shadow-sm">
+                    <div class="bg-primary text-white d-inline-flex p-3 rounded-circle mb-3 shadow-sm">
                         <i class="bi bi-person-plus-fill fs-2"></i>
                     </div>
                     <h3 class="fw-bold">Create Account</h3>
-                    <p class="text-muted small">Join ShopSphere to enjoy smooth and fast shopping</p>
+                    <p class="text-muted small">Join NovaMart to enjoy smooth and fast shopping</p>
                 </div>
 
                 <!-- Error Alert -->
