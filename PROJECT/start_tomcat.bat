@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
-title NovaMart - Apache Tomcat 11 Web Server
+title ShopSphere - Apache Tomcat 11 Web Server
 
 echo ===================================================================
-echo     NovaMart (ShopSphere) - Universal Tomcat Web Server Launcher
+echo     ShopSphere - Universal Tomcat Web Server Launcher
 echo ===================================================================
 echo.
 

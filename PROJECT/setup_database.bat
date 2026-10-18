@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
-title NovaMart - MySQL Database Setup & Seed Data Importer
+title ShopSphere - MySQL Database Setup & Seed Data Importer
 
 echo ===================================================================
-echo     NovaMart (ShopSphere) - Universal MySQL Setup & Importer
+echo     ShopSphere - Universal MySQL Setup & Importer
 echo ===================================================================
 echo.
 

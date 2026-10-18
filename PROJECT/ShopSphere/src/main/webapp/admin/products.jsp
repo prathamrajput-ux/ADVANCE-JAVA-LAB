@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <%@ taglib prefix="fmt" uri="jakarta.tags.fmt" %>
 
-<c:set var="pageTitle" value="NovaMart - Manage Products" />
+<c:set var="pageTitle" value="ShopSphere - Manage Products" />
 <%@ include file="../fragments/header.jsp" %>
 <%@ include file="../fragments/navbar.jsp" %>
 

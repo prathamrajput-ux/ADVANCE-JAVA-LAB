@@ -1,9 +1,9 @@
 @echo off
 setlocal
-title NovaMart - MySQL Database Import
+title ShopSphere - MySQL Database Import
 
 echo ===================================================================
-echo     NovaMart (ShopSphere) - MySQL Database Importer
+echo     ShopSphere - MySQL Database Importer
 echo ===================================================================
 echo.
 

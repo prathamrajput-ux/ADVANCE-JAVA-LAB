@@ -17,7 +17,7 @@ public class AppListener implements ServletContextListener, HttpSessionListener 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         ServletContext context = sce.getServletContext();
-        context.setAttribute("appName", "NovaMart");
+        context.setAttribute("appName", "ShopSphere");
         context.setAttribute("appTagline", "Next-Gen Java Enterprise E-Commerce System");
 
         System.out.println("=============================================================");

@@ -6,7 +6,7 @@
         <!-- Brand -->
         <a class="navbar-brand fw-bold d-flex align-items-center gap-2 fs-4" href="${pageContext.request.contextPath}/index.jsp">
             <i class="bi bi-bag-heart-fill text-primary"></i>
-            <span style="letter-spacing: -0.5px;">Nova<span class="text-primary">Mart</span></span>
+            <span style="letter-spacing: -0.5px;">Shop<span class="text-primary">Sphere</span></span>
         </a>
 
         <!-- Toggle Button for Mobile -->

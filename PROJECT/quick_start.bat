@@ -1,11 +1,11 @@
 @echo off
 setlocal enabledelayedexpansion
-title NovaMart (ShopSphere) - Universal Master Control Center
+title ShopSphere - Universal Master Control Center
 
 :MENU
 cls
 echo ===================================================================
-echo             NovaMart (ShopSphere) - Master Control Center
+echo                  ShopSphere - Master Control Center
 echo                 RTU Advanced Java Laboratory Project
 echo ===================================================================
 echo.

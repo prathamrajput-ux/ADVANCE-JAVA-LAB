@@ -1,9 +1,9 @@
 @echo off
 setlocal enabledelayedexpansion
-title NovaMart - Desktop Swing Inventory Application
+title ShopSphere - Desktop Swing Inventory Application
 
 echo ===================================================================
-echo     NovaMart (ShopSphere) - Desktop Swing Inventory Viewer
+echo     ShopSphere - Desktop Swing Inventory Viewer
 echo ===================================================================
 echo.
 
@@ -146,7 +146,7 @@ set "CP=%PROJECT_DIR%\target\classes;%PROJECT_DIR%\target\ShopSphere\WEB-INF\lib
 
 echo.
 echo ===================================================================
-echo  Launching NovaMart Desktop Swing UI...
+echo  Launching ShopSphere Desktop Swing UI...
 echo ===================================================================
 echo.
 

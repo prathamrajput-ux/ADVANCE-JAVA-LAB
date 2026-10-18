@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
-<c:set var="pageTitle" value="NovaMart - Modern Shopping" />
+<c:set var="pageTitle" value="ShopSphere - Modern Shopping" />
 <%@ include file="fragments/header.jsp" %>
 <%@ include file="fragments/navbar.jsp" %>
 
@@ -11,7 +11,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <span class="badge bg-light text-primary mb-2 px-3 py-2 fw-semibold">Java Enterprise E-Commerce</span>
-                <h1 class="display-4 fw-bold mb-3">Welcome to NovaMart</h1>
+                <h1 class="display-4 fw-bold mb-3">Welcome to ShopSphere</h1>
                 <p class="lead mb-4 text-white-50">
                     Discover curated essentials with fast ordering, secure checkout, and real-time inventory tracking.
                 </p>

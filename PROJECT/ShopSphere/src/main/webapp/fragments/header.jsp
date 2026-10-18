@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${pageTitle != null ? pageTitle : "NovaMart - Modern Online Shopping"}</title>
+    <title>${pageTitle != null ? pageTitle : "ShopSphere - Modern Online Shopping"}</title>
     <!-- High-Performance Resource Hints -->
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
