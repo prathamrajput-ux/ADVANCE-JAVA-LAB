@@ -18,8 +18,8 @@ ShopSphere is an e-commerce shopping web application and desktop inventory manag
 * Apache Maven
 
 ### Documentation Links
-* 👉 **[Complete Project README (`ShopSphere/src/README.md`)](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/PROJECT/ShopSphere/src/README.md)**
-* 👉 **[Root Lab README (`/README.md`)](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/README.md)**
+* 👉 **[Complete Project README (`ShopSphere/src/README.md`)](ShopSphere/src/README.md)**
+* 👉 **[Root Lab README (`README.md`)](../README.md)**
 
 ---
 

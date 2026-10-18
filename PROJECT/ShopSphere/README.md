@@ -1,7 +1,7 @@
 # ShopSphere - Project Overview
 
 > **Detailed Documentation:** For the full breakdown of features, database tables, and code structure, see:  
-> 👉 **[ShopSphere/src/README.md](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/PROJECT/ShopSphere/src/README.md)**
+> 👉 **[ShopSphere/src/README.md](src/README.md)**
 
 ---
 

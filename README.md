@@ -9,98 +9,222 @@
 ### Student Details
 * **Name:** Pratham Kumar Singh
 * **Roll No:** 24EGJAD036
-* **Branch / Course:** B.Tech - Computer Science & Engineering (AI & DS)
+* **Branch:** B.Tech - Computer Science & Engineering (AI & DS)
 * **Semester:** 5th Semester
 * **College:** Global Institute of Technology (GIT), Jaipur
 * **University:** Rajasthan Technical University (RTU), Kota
-* **Academic Session:** 2024 - 2025
 
 ---
 
-## About This Lab Repository
+## About This Repo
 
-This repository contains all my laboratory practical codes, assignments, and the final term project for the **Advanced Java Programming Lab** (5th Semester).
+This repository contains all my practical lab codes, assessment tasks, and the final semester project for the **Advanced Java Programming Lab**.
 
-The lab exercises cover the following practical topics:
+All codes have been written, compiled, and tested locally. The lab exercises cover:
 1. **Java Swing:** Desktop UI forms, event handling, and input validation
-2. **MVC Architecture:** Separating Model, View, and Controller in desktop apps
-3. **JDBC (Java Database Connectivity):** Connecting Java applications to MySQL and running SQL queries
-4. **Socket Programming:** Two-way client-server messaging over TCP
-5. **Java RMI (Remote Method Invocation):** Running distributed calculations across separate processes
+2. **MVC Architecture:** Separating Model, View, and Controller in desktop software
+3. **JDBC:** Connecting Java programs to MySQL and executing SQL queries
+4. **Socket Programming:** Two-way client-server chat over TCP
+5. **Java RMI:** Calling remote methods across JVMs using `rmiregistry`
 6. **Java Servlets & JSP:** Web development deployed on Apache Tomcat
-7. **Major Project (ShopSphere):** An e-commerce web application with a desktop inventory manager
+7. **Lab Project (ShopSphere):** An e-commerce web store with a desktop inventory manager
 
 ---
 
-## List of Lab Experiments
-
-| Exp No. | Experiment Name | Description | Folder Link | How to Run |
-| :---: | :--- | :--- | :---: | :--- |
-| **01** | **Student Registration Form** | Swing GUI form with text fields, radio buttons, reset button, and basic validation. | [EXP - 1](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%201| `javac StudentRegistration.java`<br>`java StudentRegistration` |
-| **02** | **MVC Calculator** | Basic calculator application split into Model, View, and Controller files. | [EXP - 2](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%202/CALCULATOR| `cd CALCULATOR`<br>`javac *.java`<br>`java RunCalculator` |
-| **03** | **JDBC Database Connection** | Connecting a Java program to a local MySQL database (`college`and checking connection status. | [EXP - 3](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%203/JDBC| `javac -cp ".;lib/*" src/App.java`<br>`java -cp ".;lib/*;src" App` |
-| **04** | **Client-Server Chat (Sockets)** | Bidirectional TCP socket communication between a server and a client. | [EXP - 4](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%204/serve%20and%20client) | Run `java server` in 1st terminal<br>Run `java client` in 2nd terminal |
-| **05** | **RMI Calculator** | Performing math operations using Java RMI (`rmiregistry`across client and server. | [EXP - 5](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%205/rmi) | Start `rmiregistry`<br>Run `java Server`<br>Run `java Client` |
-| **06** | **Java Servlets** | Basic servlet web application managed with Maven and deployed on Tomcat. | [EXP - 6](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%206/servlet| `mvn clean package` |
-| **07** | **HTML & JSP Integration** | Creating dynamic web pages using HTML templates and JSP on Tomcat. | [EXP - 7](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/EXP%20-%207| Deployed on Tomcat server |
+## Lab Experiments & What I Did
 
 ---
 
-## Lab Assessment Practical Tasks
+### Experiment 01: Student Registration Form (Java Swing)
+* **Folder:** `EXP - 1`
+* **File:** `StudentRegistration.java`
+* **Aim:** To build a desktop GUI form for student registration with form validation using Java Swing.
+* **What I Did:**
+  * Created a desktop window using `JFrame`.
+  * Added text fields for Name, Age, Branch, and Roll Number using `JTextField`.
+  * Added gender selection using `JRadioButton` grouped inside a `ButtonGroup` so only one option can be selected.
+  * Added Submit and Reset buttons with action listeners.
+  * Added validation checks: if any field is left empty or age is invalid, a popup message appears using `JOptionPane`.
+  * Clicking Reset clears all input fields, and clicking Submit shows a confirmation popup with the entered details.
+* **How to Run:**
+  ```cmd
+  cd "EXP - 1"
+  javac StudentRegistration.java
+  java StudentRegistration
+  ```
 
-Located inside [`JAVA ASSEMENT/`](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/JAVA%20ASSEMENT):
+---
 
-* **Swing - Student Registration Form:** Registration interface with error dialogs and form validation.
+### Experiment 02: Calculator Using MVC Architecture
+* **Folder:** `EXP - 2/CALCULATOR`
+* **Files:** `ModelCalculator.java`, `ViewsCalculator.java`, `ControllerCalculator.java`, `RunCalculator.java`
+* **Aim:** To build a GUI calculator following the Model-View-Controller (MVC) design pattern.
+* **What I Did:**
+  * **Model (`ModelCalculator.java`):** Contains the math logic (add, subtract, multiply, divide). It does not touch the UI.
+  * **View (`ViewsCalculator.java`):** Builds the graphical calculator interface (display screen, number buttons, and math operation buttons). It only shows data.
+  * **Controller (`ControllerCalculator.java`):** Listens for button clicks, reads inputs from the View, calls the Model to do the math, and sends the answer back to the View.
+  * **Runner (`RunCalculator.java`):** Starts the application by linking Model, View, and Controller together.
+* **How to Run:**
+  ```cmd
+  cd "EXP - 2/CALCULATOR"
+  javac *.java
+  java RunCalculator
+  ```
+
+---
+
+### Experiment 03: Database Connection Using JDBC
+* **Folder:** `EXP - 3/JDBC`
+* **File:** `src/App.java`
+* **Aim:** To connect a Java program to a MySQL database using the JDBC driver and verify the connection.
+* **What I Did:**
+  * Added MySQL Connector/J driver jar (`mysql-connector-j-8.3.0.jar`to the project.
+  * Used `DriverManager.getConnection()` with database URL (`jdbc:mysql://localhost:3306/college`) and credentials.
+  * Used try-with-resources so the connection closes automatically when done, preventing connection leaks.
+  * Verified connection success directly in the terminal output.
+* **How to Run:**
+  ```cmd
+  cd "EXP - 3/JDBC"
+  javac -cp ".;lib/*" src/App.java -d bin
+  java -cp "bin;lib/*" App
+  ```
+
+---
+
+### Experiment 04: Client-Server Chat Using TCP Sockets
+* **Folder:** `EXP - 4/serve and client`
+* **Files:** `server.java`, `client.java`
+* **Aim:** To create two-way real-time communication between a client and a server using TCP sockets.
+* **What I Did:**
+  * **Server (`server.java`):** Starts a `ServerSocket` on a port and waits for the client to connect. Once connected, it sets up input and output streams to receive and send messages.
+  * **Client (`client.java`):** Creates a `Socket` connecting to `localhost`. Reads messages typed in the terminal and sends them across to the server.
+  * Both client and server can type and reply continuously until "stop" is typed to close the connection.
+* **How to Run:**
+  *(Open two separate terminals)*
+  ```cmd
+  cd "EXP - 4/serve and client"
+  javac server.java client.java
+
+  # In Terminal 1 (Start Server):
+  java server
+
+  # In Terminal 2 (Start Client):
+  java client
+  ```
+
+---
+
+### Experiment 05: Distributed Calculator Using Java RMI
+* **Folder:** `EXP - 5/rmi`
+* **Files:** `Calculator.java`, `CalculatorImpl.java`, `Server.java`, `Client.java`
+* **Aim:** To run calculations remotely on another JVM using Java Remote Method Invocation (RMI).
+* **What I Did:**
+  * **Interface (`Calculator.java`):** Defined the remote interface with methods `add()`, `sub()`, `mul()`, and `div()`, extending `Remote`.
+  * **Implementation (`CalculatorImpl.java`):** Implemented the interface methods extending `UnicastRemoteObject`.
+  * **Server (`Server.java`):** Registered the remote object with `rmiregistry` using `Naming.rebind()`.
+  * **Client (`Client.java`):** Looked up the service using `Naming.lookup()` and called the math methods remotely.
+* **How to Run:**
+  ```cmd
+  cd "EXP - 5/rmi"
+  javac *.java
+  start rmiregistry
+  start java Server
+  java Client
+  ```
+
+---
+
+### Experiment 06: Java Servlets Deployed on Tomcat
+* **Folder:** `EXP - 6/servlet`
+* **Files:** `pom.xml`, servlet files inside `src/`
+* **Aim:** To build and deploy a Java Servlet web app on Apache Tomcat using Maven.
+* **What I Did:**
+  * Created a Maven web project with `jakarta.servlet-api` dependencies in `pom.xml`.
+  * Implemented an `HttpServlet` class to handle incoming `doGet()` and `doPost()` requests.
+  * Packaged the app into a `.war` file using `mvn clean package` and deployed it inside Apache Tomcat's `webapps` folder.
+* **How to Run:**
+  ```cmd
+  cd "EXP - 6/servlet"
+  mvn clean package
+  ```
+
+---
+
+### Experiment 07: Dynamic Web Pages with HTML & JSP
+* **Folder:** `EXP - 7`
+* **Files:** `index.html` and JSP pages
+* **Aim:** To convert static HTML pages into dynamic JSP pages running on Tomcat.
+* **What I Did:**
+  * Created a clean HTML layout.
+  * Integrated dynamic Java code using JSP tags, directives, and Expression Language (EL).
+  * Deployed on Tomcat so the server renders dynamic content to the browser at runtime.
+
+---
+
+## Lab Assessment Tasks
+
+Located inside `JAVA ASSEMENT/`:
+* **Swing - Student Registration Form:** Registration form UI with validation against empty fields.
 * **MVC - Student Application:** Student record management following clean MVC design.
-* **JDBC - Insert & Display:** Taking user input from UI and saving/fetching records from MySQL.
-* **Client Server - Message Communication:** Console-based client and server communication via Sockets.
-* **RMI - Calculator:** Distributed arithmetic calculation over RMI.
+* **JDBC - Insert & Display:** Taking form inputs and saving/fetching rows from MySQL into a table.
+* **Client Server - Message Communication:** Console-based client-server chat via sockets.
+* **RMI - Calculator:** Math calculation service over RMI.
 
 ---
 
-## Capstone Lab Project: ShopSphere
+## Lab Project: ShopSphere
 
-For the semester lab project, I developed **ShopSphere** — an online shopping system that connects both a web store and a desktop inventory tool to a single MySQL database:
+* **Project Folder:** `PROJECT/ShopSphere/`
+* **Detailed Project Documentation:** `PROJECT/ShopSphere/src/README.md`
 
-* **Customer Web Store:** Browse items by category, search products, add items to cart, checkout with shipping address, and view order history.
-* **Admin Web Panel:** View store dashboard statistics, add/edit products, update pricing, and change order delivery status.
-* **Desktop Inventory App:** A standalone **Java Swing** app (`SwingInventoryViewer.java`for the store or warehouse manager. It connects to the same MySQL database via JDBC, shows stock levels in a table, highlights low-stock items in red, and has a one-click restock button.
+### What is ShopSphere?
+ShopSphere is an e-commerce web store combined with a desktop stock management tool:
+* **Web Store (Customers & Admin):** Built with Servlets, JSP, JSTL, and Tomcat 11. Customers can browse items, search, add to cart, and checkout. Admins can view store stats, add/edit products, and update order status.
+* **Desktop App (Warehouse / Shop):** Built in Java Swing (`SwingInventoryViewer.java`). Connects directly to MySQL via JDBC, shows real-time product stock in a table, highlights low-stock items in red, and has a quick restock button.
+* **Shared Database:** Both the web store and desktop app connect to the same MySQL database (`shopsphere`), so inventory updates happen in real time.
 
-> [!NOTE]
-> All detailed project documentation, database tables, test credentials, and setup instructions are in the project folder:  
-> 👉 **[ShopSphere Project Documentation](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/PROJECT/ShopSphere/src/README.md)**
+### Tables in MySQL:
+* `users` — Customers and admin accounts.
+* `categories` — Product categories (Electronics, Fashion, Home, Books, Fitness, Personal Care).
+* `products` — 24 sample products with prices, stock, discounts, and images.
+* `orders` — Placed customer orders and status (`Processing`, `Shipped`, `Delivered`, `Cancelled`).
+* `order_items` — Items inside each order.
 
-### How to Run the Project Easily:
-Inside the `PROJECT/` folder, run the automated launcher script:
+### How to Run ShopSphere:
+Inside the `PROJECT/` folder, run:
 ```cmd
 cd PROJECT
 quick_start.bat
 ```
-This batch file lets you set up the MySQL database, package the WAR file using Maven, and start Apache Tomcat with one click.
+* Option `1`: 1-Click Launch (sets up database, builds with Maven, and starts Tomcat).
+* Option `3`: Opens the Desktop Swing Inventory app.
+
+### Test Logins:
+* **Admin:** `admin@shopsphere.com` / `admin123`
+* **Customer:** `customer@shopsphere.com` / `user123`
 
 ---
 
 ## Prerequisites
 
-To run these lab programs locally:
 * **Java:** JDK 17 or higher
-* **Database:** MySQL Server 8.0+ (running on port 3306)
+* **Database:** MySQL Server 8.0+
 * **Web Server:** Apache Tomcat 10.1 or 11.0
 * **Build Tool:** Apache Maven 3.9+
-* **IDE:** VS Code / IntelliJ IDEA / Eclipse
+* **IDE:** VS Code / Eclipse / IntelliJ IDEA
 
 ---
 
 ## Written Work & Lab Reports
 
-Verified lab manuals, PDF guides, and reports are available in the [`Written Work/`](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work) folder:
-* [JAVA LAB 1.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%201.pdf) — Swing GUI Basics
-* [JAVA LAB 2.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%202.pdf— MVC Architecture
-* [JAVA LAB 3.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%203.pdf) — JDBC Connection & Queries
-* [JAVA LAB 4.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%204.pdf) — Socket Programming
-* [JAVA LAB 5.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%205.pdf— Java RMI
-* [JAVA LAB 6.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%206.pdf) — Servlets & Tomcat Deployment
-* [JAVA LAB PROJECT GUIDE.pdf](file:///p:/Vth%20SEM/ADVANCE%20JAVA%20LAB/Written%20Work/JAVA%20LAB%20PROJECT%20GUIDE.pdf— Lab Project Specifications
+Verified lab manuals and report PDFs are stored in the `Written Work/` folder:
+* `Written Work/JAVA LAB 1.pdf` — Swing GUI Basics
+* `Written Work/JAVA LAB 2.pdf` — MVC Pattern
+* `Written Work/JAVA LAB 3.pdf` — JDBC Connection & Queries
+* `Written Work/JAVA LAB 4.pdf` — Socket Programming
+* `Written Work/JAVA LAB 5.pdf` — Java RMI
+* `Written Work/JAVA LAB 6.pdf` — Servlets & Tomcat
+* `Written Work/JAVA LAB PROJECT GUIDE.pdf` — Project Specifications
 
 ---
 
@@ -108,7 +232,6 @@ Verified lab manuals, PDF guides, and reports are available in the [`Written Wor
 
 **Pratham Kumar Singh**  
 Roll No: `24EGJAD036`  
-5th Semester, B.Tech CSE / AI & DS  
+5th Semester, B.Tech CSE (AI & DS)  
 Global Institute of Technology (GIT), Jaipur  
-Affiliated to Rajasthan Technical University (RTU), Kota  
-Academic Session: 2024 - 2025
+Affiliated to Rajasthan Technical University (RTU), Kota
